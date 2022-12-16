@@ -10,8 +10,8 @@
 #include <dt-bindings/led/led.h>
 
 / {
-    model = "Rable V2";
-    compatible = "Rable V2";
+    model = "rable_v2";
+    compatible = "rable_v2";
 
     chosen {
         zephyr,code-partition = &code_partition;

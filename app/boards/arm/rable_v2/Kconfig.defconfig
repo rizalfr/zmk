@@ -4,7 +4,7 @@
 if BOARD_RABLE_V2
 
 config BOARD
-	default "Rable V2"
+	default "rable_v2"
 
 config ZMK_KEYBOARD_NAME
 	default "Rable V2"
