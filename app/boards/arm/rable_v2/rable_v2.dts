@@ -156,29 +156,30 @@
     };
 };
 
-&spi0 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-    mosi-pin = <9>; // was 5 in zaphod, 6 in rable byo-mcu
-    // Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
-    sck-pin = <5>;
-    miso-pin = <6>;
-    cs-gpios = <&gpio0 5 GPIO_ACTIVE_HIGH>;
+&spi1 {
+  compatible = "nordic,nrf-spim";
+  status = "okay";
+  mosi-pin = <9>;
+  // Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
+  sck-pin = <5>;
+  miso-pin = <7>;
 
-   led_strip: ws2812@0 {
-        compatible = "worldsemi,ws2812-spi";
-        label = "SK6812minie";
+  led_strip: ws2812@0 {
+    compatible = "worldsemi,ws2812-spi";
+    label = "WS2812";
 
-        /* SPI */
-        reg = <0>; /* ignored, but necessary for SPI bindings */
-        spi-max-frequency = <4000000>;
+    /* SPI */
+    reg = <0>; /* ignored, but necessary for SPI bindings */
+    spi-max-frequency = <4000000>;
 
-        /* WS2812 */
-        chain-length = <10>;
-        spi-one-frame = <0x70>;
-        spi-zero-frame = <0x40>;
-		color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
-    };
+    /* WS2812 */
+    chain-length = <10>; /* number of LEDs */
+    spi-one-frame = <0x70>;
+    spi-zero-frame = <0x40>;
+    color-mapping = <LED_COLOR_ID_GREEN
+                          LED_COLOR_ID_RED
+                          LED_COLOR_ID_BLUE>;
+  };
 };
 
 &usbd {
