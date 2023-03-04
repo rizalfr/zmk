@@ -17,13 +17,14 @@
 
 
         col-gpios
-            = <&pro_micro 20 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 19 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 18 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 15 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 14 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 16 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 10 GPIO_ACTIVE_HIGH>
+            = <&pro_micro 9 GPIO_ACTIVE_HIGH>  // 0
+            , <&pro_micro 20 GPIO_ACTIVE_HIGH> // 1
+            , <&pro_micro 19 GPIO_ACTIVE_HIGH> // 2
+            , <&pro_micro 18 GPIO_ACTIVE_HIGH> // 3
+            , <&pro_micro 15 GPIO_ACTIVE_HIGH> // 4
+            , <&pro_micro 14 GPIO_ACTIVE_HIGH> // 5
+            , <&pro_micro 16 GPIO_ACTIVE_HIGH> // 6
+            , <&pro_micro 10 GPIO_ACTIVE_HIGH> // 7
             ;
 
         row-gpios
