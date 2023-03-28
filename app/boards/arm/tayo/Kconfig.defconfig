@@ -1,13 +1,13 @@
 # Copyright (c) 2020 Pete Johanson
 # SPDX-License-Identifier: MIT
 
-if BOARD_TOYO
+if BOARD_TAYO
 
 config BOARD
-	default "toyo"
+	default "tayo"
 
 config ZMK_KEYBOARD_NAME
-	default "JMK Toyo"
+	default "Rable88 (Tayo)"
 
 if USB
 
@@ -34,4 +34,4 @@ config ZMK_USB
 config ZMK_BATTERY_VOLTAGE_DIVIDER
 	default y
 
-endif # BOARD_TOYO
+endif # BOARD_TAYO
