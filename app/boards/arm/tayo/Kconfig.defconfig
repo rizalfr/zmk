@@ -7,7 +7,7 @@ config BOARD
 	default "tayo"
 
 config ZMK_KEYBOARD_NAME
-	default "Rable88 (Tayo)"
+	default "Tayo (Rable88)"
 
 if USB
 
