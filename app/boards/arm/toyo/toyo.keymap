@@ -16,14 +16,7 @@
     compatible = "zmk,keymap";
     
     default_layer {
-        // ----------------------------------------------------------------------------------------------------------
-        // | F1  | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   BKSP   | HOME    |
-        // | F2  | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   "|"   | PG UP   |
-        // | F3  | CAPS  |  A  |  S  | D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |     ENTER     | PG DOWN |
-        // | F4  |  SHIFT | SHIFT |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |   SHIFT  |  UP   | END     |
-        // | F5  |  CTL  |  ALT  |  WIN  |                SPACE MO(1)   | MO(1)|  MO(2)  |  LEFT  |  DOWN | RIGHT   |
-        // ----------------------------------------------------------------------------------------------------------
-      bindings = <
+     bindings = <
         &kp ESC  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8     &kp F9   &kp F10    &kp F11  &kp F12  &kp F13  &kp F14
         &gresc     &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8     &kp N9   &kp N0    &kp MINUS  &kp EQUAL  &kp BSPC    &kp HOME
         &kp TAB    &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I      &kp O    &kp P     &kp LBKT   &kp RBKT       &kp BSLH        &kp PG_UP
