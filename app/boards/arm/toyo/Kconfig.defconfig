@@ -7,7 +7,7 @@ config BOARD
 	default "toyo"
 
 config ZMK_KEYBOARD_NAME
-	default "JMK Toyo"
+	default "Toyo (Rable75)"
 
 if USB
 
