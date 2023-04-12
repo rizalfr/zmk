@@ -20,8 +20,7 @@
         label = "KSCAN";
         diode-direction = "col2row";
 
-
-
+        // #define MATRIX_COL_PINS_RIGHT { F5, F6, F7, B1, B3, B2, B6, C6 }
         col-gpios
             = <&pro_micro 20 GPIO_ACTIVE_HIGH>
             , <&pro_micro 19 GPIO_ACTIVE_HIGH>
@@ -33,6 +32,7 @@
             , <&pro_micro  5 GPIO_ACTIVE_HIGH>
             ;
 
+        // #define MATRIX_ROW_PINS_RIGHT { F4, D4, D7, E6, B4, B5 }
         row-gpios
             = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
