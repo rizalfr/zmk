@@ -21,40 +21,17 @@
         zmk,kscan = &kscan0;
 		zmk,battery = &vbatt;
         zmk,matrix_transform = &default_transform;
-		zmk,underglow = &led_strip;
-    };
-
-    leds {
-        compatible = "gpio-leds";
-        blue_led: led_0 {
-            gpios = <&gpio0 25 GPIO_ACTIVE_HIGH>;
-            label = "Blue LED";
-        };
     };
 
     vbatt: vbatt {
 		compatible = "zmk,battery-voltage-divider";
 		label = "BATTERY";
-        io-channels = <&adc 3>;
+        io-channels = <&adc 7>;
 		output-ohms = <2000000>;
 		full-ohms = <(2000000 + 806000)>;
 	};
 
-    // Encoder
-    encoder_1: encoder_1 {
-        compatible = "alps,ec11";
-        label = "Encoder 1";
-        a-gpios = <&gpio1 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        b-gpios = <&gpio1 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        resolution = <4>;
-        status = "okay";
-    };
 
-
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&encoder_1>;
-    };
 
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
@@ -89,8 +66,9 @@
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
-        columns = <14>;
         rows = <5>;
+        columns = <14>;
+        
 
         map = <
             RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5) RC(0,6) RC(0,7) RC(0,8) RC(0,9) RC(0,10) RC(0,11) RC(0,12) RC(0,13) RC(1,13)  
@@ -154,31 +132,6 @@
     };
 };
 
-&spi1 {
-  compatible = "nordic,nrf-spim";
-  status = "okay";
-  mosi-pin = <9>;
-  // Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
-  sck-pin = <6>;
-  miso-pin = <8>;
-
-  led_strip: ws2812@0 {
-    compatible = "worldsemi,ws2812-spi";
-    label = "WS2812";
-
-    /* SPI */
-    reg = <0>; /* ignored, but necessary for SPI bindings */
-    spi-max-frequency = <4000000>;
-
-    /* WS2812 */
-    chain-length = <18>; /* number of LEDs */
-    spi-one-frame = <0x70>;
-    spi-zero-frame = <0x40>;
-    color-mapping = <LED_COLOR_ID_GREEN
-                     LED_COLOR_ID_RED
-                     LED_COLOR_ID_BLUE>;
-  };
-};
 
 &usbd {
 	status = "okay";
