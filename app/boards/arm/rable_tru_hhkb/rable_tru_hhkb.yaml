@@ -1,0 +1,15 @@
+identifier: rable_tru_hhkb
+name: rable_tru_hhkb
+type: keyboard
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+supported:
+  - adc
+  - usb_device
+  - ble
+  - ieee802154
+  - pwm
+  - watchdog
