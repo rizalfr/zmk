@@ -7,7 +7,7 @@ config BOARD
 	default "mayo"
 
 config ZMK_KEYBOARD_NAME
-	default "Rable V2"
+	default "Mayo"
 
 if USB
 
