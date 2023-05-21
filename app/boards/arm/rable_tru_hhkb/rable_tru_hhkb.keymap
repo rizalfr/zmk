@@ -43,7 +43,7 @@
       bindings = <
         &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &kp GRAVE   &kp GRAVE           
         &trans   &trans   &trans    &kp UP   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans      
-        &trans  &trans   &kp LEFT   &kp DOWN   &kp RIGHT  &trans   &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &trans    &trans            &trans               
+        &trans  &trans   &kp LEFT   &kp DOWN   &kp RIGHT  &trans   &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &trans    &trans            &rgb_ug RGB_TOG               
         &trans  &trans &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans                       &trans   &trans     
         &trans   &trans   &trans                                   &trans                                        &trans      &trans    &trans   &trans    
       >;
