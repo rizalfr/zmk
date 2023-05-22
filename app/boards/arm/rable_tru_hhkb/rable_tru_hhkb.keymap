@@ -45,7 +45,7 @@
         &trans   &trans   &trans    &kp UP   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans      
         &trans  &trans   &kp LEFT   &kp DOWN   &kp RIGHT  &trans   &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &trans    &trans            &rgb_ug RGB_TOG               
         &trans  &trans &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans                       &trans   &trans     
-        &trans   &trans   &trans                                   &trans                                        &trans      &trans    &trans   &trans    
+               &trans   &trans                                   &trans                                        &trans      &trans     
       >;
     };
     
@@ -62,7 +62,7 @@
         &trans  &sys_reset     &bootloader   &trans    &trans    &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   
         &trans  &out OUT_USB   &out OUT_BLE    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans            &rgb_ug RGB_TOG             
         &ext_power EP_ON  &trans &ext_power EP_OFF   &ext_power EP_TOG    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans                       &trans   &trans           
-        &trans   &trans   &trans                                   &trans                                         &trans   &trans     &trans   &trans  
+               &trans   &trans                                   &trans                                         &trans   &trans     
       >;
     };
     
