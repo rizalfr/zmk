@@ -16,14 +16,7 @@
     compatible = "zmk,keymap";
     
     default_layer {
-        // ----------------------------------------------------------------------------------------------------------
-        // | F1  | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   BKSP   | HOME    |
-        // | F2  | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   "|"   | PG UP   |
-        // | F3  | CAPS  |  A  |  S  | D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |     ENTER     | PG DOWN |
-        // | F4  |  SHIFT | SHIFT |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |   SHIFT  |  UP   | END     |
-        // | F5  |  CTL  |  ALT  |  WIN  |                SPACE MO(1)   | MO(1)|  MO(2)  |  LEFT  |  DOWN | RIGHT   |
-        // ----------------------------------------------------------------------------------------------------------
-      bindings = <
+       bindings = <
         &kp TAB     &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I      &kp O    &kp P     &kp LBKT   
         &kp LCTRL   &kp A    &kp S    &kp D    &kp F    &kp G    &kp H    &kp J    &kp K      &kp L    &kp RET    
         &kp LSHFT   &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH          
