@@ -7,7 +7,7 @@ config BOARD
 	default "yas62"
 
 config ZMK_KEYBOARD_NAME
-	default "Rable V2"
+	default "Nouen62"
 
 if USB
 
