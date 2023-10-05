@@ -10,8 +10,8 @@
 #include <dt-bindings/led/led.h>
 
 / {
-    model = "yas62";
-    compatible = "yas62";
+    model = "nouen62";
+    compatible = "nouen62";
 
     chosen {
         zephyr,code-partition = &code_partition;

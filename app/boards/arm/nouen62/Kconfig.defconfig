@@ -1,10 +1,10 @@
 # Copyright (c) 2020 Pete Johanson
 # SPDX-License-Identifier: MIT
 
-if BOARD_YAS62
+if BOARD_NOUEN62
 
 config BOARD
-	default "yas62"
+	default "nouen62"
 
 config ZMK_KEYBOARD_NAME
 	default "Nouen62"
@@ -34,4 +34,4 @@ config ZMK_USB
 config ZMK_BATTERY_VOLTAGE_DIVIDER
 	default y
 
-endif # BOARD_YAS62
+endif # BOARD_NOUEN62
