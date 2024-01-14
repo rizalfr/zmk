@@ -52,7 +52,7 @@
         // ----------------------------------------------------------------------------------------------------------------
       bindings = <
         &trans  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans   &bt BT_CLR   &bt BT_CLR        
-        &trans  &sys_reset     &bootloader   &trans    &trans    &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   
+        &trans  &reset     &bootloader   &trans    &trans    &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   
         &trans  &out OUT_USB   &out OUT_BLE    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans            &rgb_ug RGB_TOG           
         &ext_power EP_ON  &trans &ext_power EP_OFF   &ext_power EP_TOG    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans                       &trans   &trans        
         &trans   &trans   &trans                                   &trans                                         &trans   &trans     &trans   &trans  
