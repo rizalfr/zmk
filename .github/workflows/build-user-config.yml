@@ -32,15 +32,7 @@ jobs:
       build_matrix: ${{ env.build_matrix }}
     steps:
       - name: Checkout
-<<<<<<< HEAD
-<<<<<<< HEAD
         uses: actions/checkout@v4
-=======
-        uses: actions/checkout@v2
->>>>>>> eba2ba26 (Update build-user-config.yml)
-=======
-        uses: actions/checkout@v3
->>>>>>> debe67f3 (Update build-user-config.yml)
 
       - name: Install yaml2json
         run: python3 -m pip install remarshal
@@ -68,8 +60,6 @@ jobs:
           echo "build_dir=$(mktemp -d)" >> $GITHUB_ENV
 
       - name: Prepare variables
-<<<<<<< HEAD
-<<<<<<< HEAD
         shell: sh -x {0}
         env:
           board: ${{ matrix.board }}
@@ -105,69 +95,25 @@ jobs:
 
       - name: Cache west modules
         uses: actions/cache@v4
-=======
-        id: variables
-=======
-        shell: sh -x {0}
-        env:
-          shield: ${{ matrix.shield }}
->>>>>>> debe67f3 (Update build-user-config.yml)
-        run: |
-          echo "zephyr_version=${ZEPHYR_VERSION}" >> $GITHUB_ENV
-          echo "extra_cmake_args=${shield:+-DSHIELD=\"$shield\"}" >> $GITHUB_ENV
-          echo "display_name=${shield:+$shield - }${{ matrix.board }}" >> $GITHUB_ENV
-          echo "artifact_name=${shield:+$shield-}${{ matrix.board }}-zmk" >> $GITHUB_ENV
-
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Cache west modules
-<<<<<<< HEAD
-        uses: actions/cache@v3.0.1
->>>>>>> eba2ba26 (Update build-user-config.yml)
-=======
-        uses: actions/cache@v3.0.11
->>>>>>> debe67f3 (Update build-user-config.yml)
         continue-on-error: true
         env:
           cache_name: cache-zephyr-${{ env.zephyr_version }}-modules
         with:
           path: |
-<<<<<<< HEAD
             ${{ env.base_dir }}/modules/
             ${{ env.base_dir }}/tools/
             ${{ env.base_dir }}/zephyr/
             ${{ env.base_dir }}/bootloader/
             ${{ env.base_dir }}/zmk/
           key: ${{ runner.os }}-build-${{ env.cache_name }}-${{ hashFiles('**/west.yml', '**/build.yaml') }}
-=======
-            modules/
-            tools/
-            zephyr/
-            bootloader/
-            zmk/
-<<<<<<< HEAD
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/west.yml', '**/build.yaml') }}
->>>>>>> eba2ba26 (Update build-user-config.yml)
-=======
-          key: ${{ runner.os }}-build-${{ env.cache_name }}-${{ hashFiles('**/west.yml', '**/build.yaml') }}
->>>>>>> debe67f3 (Update build-user-config.yml)
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache_name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
       - name: West Init
-<<<<<<< HEAD
-<<<<<<< HEAD
         working-directory: ${{ env.base_dir }}
         run: west init -l "${{ env.base_dir }}/${{ inputs.config_path }}"
-=======
-        run: west init -l ${{ inputs.config_path }}
->>>>>>> eba2ba26 (Update build-user-config.yml)
-=======
-        run: west init -l "${{ inputs.config_path }}"
->>>>>>> debe67f3 (Update build-user-config.yml)
 
       - name: West Update
         working-directory: ${{ env.base_dir }}
@@ -177,8 +123,6 @@ jobs:
         working-directory: ${{ env.base_dir }}
         run: west zephyr-export
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       - name: West Build (${{ env.display_name }})
         working-directory: ${{ env.base_dir }}
         shell: sh -x {0}
@@ -206,22 +150,6 @@ jobs:
             echo "No Devicetree output"
           fi
         if: ${{ !cancelled() }}
-=======
-      - name: West Build (${{ steps.variables.outputs.display-name }})
-        run: |
-          west build -s zmk/app -b ${{ matrix.board }} -- -DZMK_CONFIG=${GITHUB_WORKSPACE}/${{ inputs.config_path }} ${{ steps.variables.outputs.extra-cmake-args }} ${{ matrix.cmake-args }}
-
-      - name: ${{ steps.variables.outputs.display-name }} Kconfig file
-        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$" | sort
->>>>>>> eba2ba26 (Update build-user-config.yml)
-=======
-      - name: West Build (${{ env.display_name }})
-        shell: sh -x {0}
-        run: west build -s zmk/app -b "${{ matrix.board }}" -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/${{ inputs.config_path }}" ${{ env.extra_cmake_args }} ${{ matrix.cmake-args }}
-
-      - name: ${{ env.display_name }} Kconfig file
-        run: grep -v -e "^#" -e "^$" build/zephyr/.config | sort
->>>>>>> debe67f3 (Update build-user-config.yml)
 
       - name: Rename artifacts
         shell: sh -x {0}
@@ -229,8 +157,6 @@ jobs:
           mkdir "${{ env.build_dir }}/artifacts"
           if [ -f "${{ env.build_dir }}/zephyr/zmk.uf2" ]
           then
-<<<<<<< HEAD
-<<<<<<< HEAD
             cp "${{ env.build_dir }}/zephyr/zmk.uf2" "${{ env.build_dir }}/artifacts/${{ env.artifact_name }}.uf2"
           elif [ -f "${{ env.build_dir }}/zephyr/zmk.${{ inputs.fallback_binary }}" ]
           then
@@ -254,19 +180,3 @@ jobs:
           name: ${{ inputs.archive_name }}
           pattern: artifact-*
           delete-merged: true
-=======
-            cp build/zephyr/zmk.uf2 "build/artifacts/${{ steps.variables.outputs.artifact-name }}.uf2"
-=======
-            cp build/zephyr/zmk.uf2 "build/artifacts/${{ env.artifact_name }}.uf2"
->>>>>>> debe67f3 (Update build-user-config.yml)
-          elif [ -f build/zephyr/zmk.${{ inputs.fallback_binary }} ]
-          then
-            cp "build/zephyr/zmk.${{ inputs.fallback_binary }}" "build/artifacts/${{ env.artifact_name }}.${{ inputs.fallback_binary }}"
-          fi
-
-      - name: Archive (${{ env.display_name }})
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ inputs.archive_name }}
-          path: build/artifacts
->>>>>>> eba2ba26 (Update build-user-config.yml)
