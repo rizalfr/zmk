@@ -18,29 +18,30 @@ on:
         default: "bin"
         required: false
         type: string
-      archive_name:
-        description: "Archive output file name"
-        default: "firmware"
-        required: false
-        type: string
 
 jobs:
   matrix:
     runs-on: ubuntu-22.04
     name: Fetch Build Keyboards
     outputs:
-      build_matrix: ${{ env.build_matrix }}
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - name: Checkout
+<<<<<<< HEAD
         uses: actions/checkout@v4
+=======
+        uses: actions/checkout@v2
+>>>>>>> eba2ba26 (Update build-user-config.yml)
 
       - name: Install yaml2json
         run: python3 -m pip install remarshal
 
-      - name: Fetch Build Matrix
+      - id: set-matrix
+        name: Fetch Build Matrix
         run: |
-          echo "build_matrix=$(yaml2json '${{ inputs.build_matrix_path }}' | jq -c .)" >> $GITHUB_ENV
-          yaml2json "${{ inputs.build_matrix_path }}" | jq
+          matrix=$(yaml2json ${{ inputs.build_matrix_path }} | jq -c .)
+          yaml2json ${{ inputs.build_matrix_path }}
+          echo "::set-output name=matrix::${matrix}"
 
   build:
     runs-on: ubuntu-latest
@@ -50,7 +51,7 @@ jobs:
     name: Build
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.matrix.outputs.build_matrix) }}
+      matrix: ${{fromJson(needs.matrix.outputs.matrix)}}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -60,6 +61,7 @@ jobs:
           echo "build_dir=$(mktemp -d)" >> $GITHUB_ENV
 
       - name: Prepare variables
+<<<<<<< HEAD
         shell: sh -x {0}
         env:
           board: ${{ matrix.board }}
@@ -95,25 +97,61 @@ jobs:
 
       - name: Cache west modules
         uses: actions/cache@v4
+=======
+        id: variables
+        run: |
+          if [ -n "${{ matrix.shield }}" ]; then
+            EXTRA_CMAKE_ARGS="-DSHIELD=${{ matrix.shield }}"
+            ARTIFACT_NAME="${{ matrix.shield }}-${{ matrix.board }}-zmk"
+            DISPLAY_NAME="${{ matrix.shield }} - ${{ matrix.board }}"
+          else
+            EXTRA_CMAKE_ARGS=
+            DISPLAY_NAME="${{ matrix.board }}"
+            ARTIFACT_NAME="${{ matrix.board }}-zmk"
+          fi
+          echo ::set-output name=extra-cmake-args::${EXTRA_CMAKE_ARGS}
+          echo ::set-output name=artifact-name::${ARTIFACT_NAME}
+          echo ::set-output name=display-name::${DISPLAY_NAME}
+          echo ::set-output name=zephyr-version::${ZEPHYR_VERSION}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cache west modules
+        uses: actions/cache@v3.0.1
+>>>>>>> eba2ba26 (Update build-user-config.yml)
         continue-on-error: true
         env:
-          cache_name: cache-zephyr-${{ env.zephyr_version }}-modules
+          cache-name: cache-zephyr-${{ steps.variables.outputs.zephyr-version }}-modules
         with:
           path: |
+<<<<<<< HEAD
             ${{ env.base_dir }}/modules/
             ${{ env.base_dir }}/tools/
             ${{ env.base_dir }}/zephyr/
             ${{ env.base_dir }}/bootloader/
             ${{ env.base_dir }}/zmk/
           key: ${{ runner.os }}-build-${{ env.cache_name }}-${{ hashFiles('**/west.yml', '**/build.yaml') }}
+=======
+            modules/
+            tools/
+            zephyr/
+            bootloader/
+            zmk/
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/west.yml', '**/build.yaml') }}
+>>>>>>> eba2ba26 (Update build-user-config.yml)
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache_name }}-
+            ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
       - name: West Init
+<<<<<<< HEAD
         working-directory: ${{ env.base_dir }}
         run: west init -l "${{ env.base_dir }}/${{ inputs.config_path }}"
+=======
+        run: west init -l ${{ inputs.config_path }}
+>>>>>>> eba2ba26 (Update build-user-config.yml)
 
       - name: West Update
         working-directory: ${{ env.base_dir }}
@@ -123,6 +161,7 @@ jobs:
         working-directory: ${{ env.base_dir }}
         run: west zephyr-export
 
+<<<<<<< HEAD
       - name: West Build (${{ env.display_name }})
         working-directory: ${{ env.base_dir }}
         shell: sh -x {0}
@@ -150,13 +189,21 @@ jobs:
             echo "No Devicetree output"
           fi
         if: ${{ !cancelled() }}
+=======
+      - name: West Build (${{ steps.variables.outputs.display-name }})
+        run: |
+          west build -s zmk/app -b ${{ matrix.board }} -- -DZMK_CONFIG=${GITHUB_WORKSPACE}/${{ inputs.config_path }} ${{ steps.variables.outputs.extra-cmake-args }} ${{ matrix.cmake-args }}
+
+      - name: ${{ steps.variables.outputs.display-name }} Kconfig file
+        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$" | sort
+>>>>>>> eba2ba26 (Update build-user-config.yml)
 
       - name: Rename artifacts
-        shell: sh -x {0}
         run: |
           mkdir "${{ env.build_dir }}/artifacts"
           if [ -f "${{ env.build_dir }}/zephyr/zmk.uf2" ]
           then
+<<<<<<< HEAD
             cp "${{ env.build_dir }}/zephyr/zmk.uf2" "${{ env.build_dir }}/artifacts/${{ env.artifact_name }}.uf2"
           elif [ -f "${{ env.build_dir }}/zephyr/zmk.${{ inputs.fallback_binary }}" ]
           then
@@ -180,3 +227,16 @@ jobs:
           name: ${{ inputs.archive_name }}
           pattern: artifact-*
           delete-merged: true
+=======
+            cp build/zephyr/zmk.uf2 "build/artifacts/${{ steps.variables.outputs.artifact-name }}.uf2"
+          elif [ -f build/zephyr/zmk.${{ inputs.fallback_binary }} ]
+          then
+            cp build/zephyr/zmk.${{ inputs.fallback_binary }} "build/artifacts/${{ steps.variables.outputs.artifact-name }}.${{ inputs.fallback_binary }}"
+          fi
+
+      - name: Archive (${{ steps.variables.outputs.display-name }})
+        uses: actions/upload-artifact@v2
+        with:
+          name: firmware
+          path: build/artifacts
+>>>>>>> eba2ba26 (Update build-user-config.yml)
