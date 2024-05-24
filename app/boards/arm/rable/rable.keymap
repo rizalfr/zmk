@@ -12,10 +12,16 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+  sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder_1>;
+    };
   keymap {
     compatible = "zmk,keymap";
     
+
     default_layer {
+       sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         // ----------------------------------------------------------------------------------------------------------
         // | F1  | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   BKSP   | HOME    |
         // | F2  | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   "|"   | PG UP   |
@@ -24,7 +30,7 @@
         // | F5  |  CTL  |  ALT  |  WIN  |                SPACE MO(1)          |  MO(1)  |  LEFT  |  DOWN | RIGHT   |
         // ----------------------------------------------------------------------------------------------------------
       bindings = <
-        &kp F2  &gresc     &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8     &kp N9   &kp N0    &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE  &kp HOME
+        &kp F1  &gresc     &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8     &kp N9   &kp N0    &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE  &kp HOME
         &kp F2  &kp TAB    &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I      &kp O    &kp P     &kp LBKT   &kp RBKT       &kp BSPC        &kp PG_UP
         &kp F3  &kp CLCK   &kp A    &kp S  &kp D    &kp F    &kp G    &kp H    &kp J    &kp K      &kp L    &kp SEMI  &kp SQT           &kp RET                   &kp PG_DN
         &kp F4  &kp LSHFT  &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH                      &kp RSHFT   &kp UP    &kp END
@@ -33,6 +39,7 @@
     };
 
     arrow_layer {
+       sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         // ----------------------------------------------------------------------------------------------------------------
         // |        |    |     |     |     |     |     |     |     |     |     |     |     |     |     |   `~    |
         // |        |    |     |     |     |     |     |     |     |     |     |     |     |     |     |         |
@@ -50,6 +57,7 @@
     };
     
     mod_layer {
+       sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         // ----------------------------------------------------------------------------------------------------------------
         // |        |    | BT 1|BT 2 |BT 3 |BT 4 |     |     |     |     |     |     |     |     |BT CLR |         |
         // |        |    | RST | BOOT|     |     |     |     |     |     |     |     |     |     |       |         |
@@ -59,7 +67,7 @@
         // ----------------------------------------------------------------------------------------------------------------
       bindings = <
         &trans   &trans &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans   &bt BT_CLR   &bt BT_CLR     &trans     
-        &trans  &trans  &sys_reset     &bootloader   &trans    &trans    &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans 
+        &trans  &trans  &reset     &bootloader   &trans    &trans    &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans 
         &trans  &trans  &out OUT_USB   &out OUT_BLE    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans            &rgb_ug RGB_TOG            &trans  
         &trans  &ext_power EP_ON   &ext_power EP_OFF   &ext_power EP_TOG    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans                       &trans   &trans           &trans   
         &trans  &trans   &trans   &trans                                   &trans                                                 &trans     &trans   &trans  &trans

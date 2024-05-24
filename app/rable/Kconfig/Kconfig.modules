@@ -1,0 +1,66 @@
+menu "CANopenNode (/home/zacksupreme/Documents/Keyboards/zmk/modules/lib/canopennode)"
+osource "$(ZEPHYR_CANOPENNODE_KCONFIG)"
+config ZEPHYR_CANOPENNODE_MODULE
+	bool
+	default y
+endmenu
+menu "hal_gigadevice (/home/zacksupreme/Documents/Keyboards/zmk/modules/hal/gigadevice)"
+osource "$(ZEPHYR_HAL_GIGADEVICE_KCONFIG)"
+config ZEPHYR_HAL_GIGADEVICE_MODULE
+	bool
+	default y
+endmenu
+menu "hal_nordic (/home/zacksupreme/Documents/Keyboards/zmk/modules/hal/nordic)"
+osource "$(ZEPHYR_HAL_NORDIC_KCONFIG)"
+config ZEPHYR_HAL_NORDIC_MODULE
+	bool
+	default y
+endmenu
+menu "hal_rpi_pico (/home/zacksupreme/Documents/Keyboards/zmk/modules/hal/rpi_pico)"
+osource "$(ZEPHYR_HAL_RPI_PICO_KCONFIG)"
+config ZEPHYR_HAL_RPI_PICO_MODULE
+	bool
+	default y
+endmenu
+menu "lz4 (/home/zacksupreme/Documents/Keyboards/zmk/modules/lib/lz4)"
+osource "$(ZEPHYR_LZ4_KCONFIG)"
+config ZEPHYR_LZ4_MODULE
+	bool
+	default y
+endmenu
+menu "mbedtls (/home/zacksupreme/Documents/Keyboards/zmk/modules/crypto/mbedtls)"
+osource "$(ZEPHYR_MBEDTLS_KCONFIG)"
+config ZEPHYR_MBEDTLS_MODULE
+	bool
+	default y
+endmenu
+menu "nanopb (/home/zacksupreme/Documents/Keyboards/zmk/modules/lib/nanopb)"
+osource "$(ZEPHYR_NANOPB_KCONFIG)"
+config ZEPHYR_NANOPB_MODULE
+	bool
+	default y
+endmenu
+menu "tflite-micro (/home/zacksupreme/Documents/Keyboards/zmk/modules/lib/tflite-micro)"
+osource "$(ZEPHYR_TFLITE_MICRO_KCONFIG)"
+config ZEPHYR_TFLITE_MICRO_MODULE
+	bool
+	default y
+endmenu
+menu "TraceRecorder (/home/zacksupreme/Documents/Keyboards/zmk/modules/debug/TraceRecorder)"
+osource "/home/zacksupreme/Documents/Keyboards/zmk/modules/debug/TraceRecorder/kernelports/Zephyr/Kconfig"
+config ZEPHYR_TRACERECORDER_MODULE
+	bool
+	default y
+endmenu
+menu "zscilib (/home/zacksupreme/Documents/Keyboards/zmk/modules/lib/zscilib)"
+osource "/home/zacksupreme/Documents/Keyboards/zmk/modules/lib/zscilib/Kconfig.zscilib"
+config ZEPHYR_ZSCILIB_MODULE
+	bool
+	default y
+endmenu
+menu "drivers (/home/zacksupreme/Documents/Keyboards/zmk/app/drivers)"
+osource "/home/zacksupreme/Documents/Keyboards/zmk/app/drivers/Kconfig"
+config ZEPHYR_DRIVERS_MODULE
+	bool
+	default y
+endmenu
