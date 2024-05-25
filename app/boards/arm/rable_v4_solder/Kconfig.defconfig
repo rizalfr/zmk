@@ -7,7 +7,7 @@ config BOARD
 	default "rable_v4"
 
 config ZMK_KEYBOARD_NAME
-	default "Rable V2"
+	default "Rable V4 Solder"
 
 if USB
 
