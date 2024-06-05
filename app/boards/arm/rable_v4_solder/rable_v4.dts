@@ -21,6 +21,7 @@
         zmk,kscan = &kscan0;
 		zmk,battery = &vbatt;
         zmk,matrix_transform = &default_transform;
+        zmk,kscan = &side_band_behavior_triggers;
     };
 
     leds {
@@ -57,7 +58,11 @@
 
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
+        wakeup-source;
         label = "KSCAN";
+        debounce-press-ms = <1>;
+        debounce-release-ms = <5>;
+
         diode-direction = "col2row";
 
         row-gpios
@@ -83,6 +88,7 @@
             , <&gpio1 9 GPIO_ACTIVE_HIGH >     // C12
             , <&gpio0 7 GPIO_ACTIVE_HIGH >     // C13
             , <&gpio0 29 GPIO_ACTIVE_HIGH >      // C14    
+            , <&gpio1 4 GPIO_ACTIVE_HIGH >     //soft off
             ;
     };
             // , <&gpio0 30 GPIO_ACTIVE_HIGH >      // C15
@@ -105,6 +111,32 @@
             RC(4,0) RC(4,1) RC(4,2) RC(4,6) RC(4,10) RC(4,11) RC(4,12) RC(4,13) 
         >;
     };
+
+    
+    
+
+    side_band_behavior_triggers: side_band_behavior_triggers {
+        compatible = "zmk,kscan-sideband-behaviors";
+        wakeup-source;
+        kscan = <&kscan0>;
+        soft_off {
+            column = <0>;
+            row = <15>;
+            bindings = <&soft_off>;
+        };
+    };
+
+    // wakeup_source: wakeup_source {
+    //     compatible = "zmk,gpio-key-wakeup-trigger";
+
+    //     trigger = <&on_off_key>;
+    //     wakeup-source;
+    // };
+
+    // soft_off_wakers {
+    //     compatible = "zmk,soft-off-wakeup-sources";
+    //     wakeup-sources = <&wakeup_source>;
+    // };
 };
 
 &adc {
