@@ -6,6 +6,6 @@
 
 #include "cradio.dtsi"
 
-&default_transform {
+&cuddlykeyboards_ferris_transform {
     col-offset = <17>;
 };

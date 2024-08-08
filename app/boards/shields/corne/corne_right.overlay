@@ -6,11 +6,11 @@
 
 #include "corne.dtsi"
 
-&default_transform {
+&foostan_corne_6col_transform {
     col-offset = <6>;
 };
 
-&five_column_transform {
+&foostan_corne_5col_transform {
     col-offset = <6>;
 };
 
