@@ -7,7 +7,7 @@ config BOARD
 	default "m7w"
 
 config ZMK_KEYBOARD_NAME
-	default "Rable V4 Solder"
+	default "m7w keyboard"
 
 if USB
 
