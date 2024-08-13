@@ -7,7 +7,7 @@ config BOARD
 	default "kibo"
 
 config ZMK_KEYBOARD_NAME
-	default "kibo keyboard"
+	default "Makibao"
 
 if USB
 
