@@ -814,10 +814,11 @@ static int keymap_handle_set(const char *name, size_t len, settings_read_cb read
                     binding_setting.behavior_local_id);
         }
 
-        zmk_keymap[layer][key_position] = (struct zmk_behavior_binding){
+        zmk_keymap[layer][key_position] = (struct zmk_behavior_binding) {
+#if IS_ENABLED(CONFIG_ZMK_BEHAVIOR_LOCAL_IDS_IN_BINDINGS)
             .local_id = binding_setting.behavior_local_id,
-            .behavior_dev = name,
-            .param1 = binding_setting.param1,
+#endif
+            .behavior_dev = name, .param1 = binding_setting.param1,
             .param2 = binding_setting.param2,
         };
     }
@@ -842,6 +843,7 @@ static int keymap_handle_set(const char *name, size_t len, settings_read_cb read
 };
 
 static int keymap_handle_commit(void) {
+#if IS_ENABLED(CONFIG_ZMK_BEHAVIOR_LOCAL_IDS_IN_BINDINGS)
     for (int l = 0; l < ZMK_KEYMAP_LAYERS_LEN; l++) {
         for (int p = 0; p < ZMK_KEYMAP_LEN; p++) {
             struct zmk_behavior_binding *binding = &zmk_keymap[l][p];
@@ -857,6 +859,7 @@ static int keymap_handle_commit(void) {
             }
         }
     }
+#endif
 
     return 0;
 }
