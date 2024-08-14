@@ -44,6 +44,7 @@ module.exports = {
         "features/backlight",
         "features/battery",
         "features/soft-off",
+        "features/studio",
       ],
     },
     {
@@ -77,6 +78,7 @@ module.exports = {
         "behaviors/backlight",
         "behaviors/power",
         "behaviors/soft-off",
+        "behaviors/studio-unlock",
       ],
     },
     {
@@ -112,6 +114,7 @@ module.exports = {
         "config/power",
         "config/underglow",
         "config/system",
+        "config/studio",
       ],
     },
     {
@@ -144,6 +147,7 @@ module.exports = {
             "development/new-shield",
             "development/hardware-metadata-files",
             "development/new-behavior",
+            "development/studio-setup",
           ],
         },
       ],
