@@ -3,7 +3,7 @@
 / {
     full_65_layout: full_65_layout {
         compatible = "zmk,physical-layout";
-        display-name = "65_plus";
+        display-name = "full_65_layout";
 
         kscan = <&kscan0>;
         transform = <&default_transform>;
@@ -23,8 +23,7 @@
             , <&key_physical_attrs 100 100 1125    0       0     0     0>
             , <&key_physical_attrs 100 100 1225    0       0     0     0>
             , <&key_physical_attrs 100 100 1325    0       0     0     0>
-            , <&key_physical_attrs 100 100 1425    0       0     0     0>
-            , <&key_physical_attrs 100 100 1525    0       0     0     0>
+            , <&key_physical_attrs 200 100 1425    0       0     0     0>
             , <&key_physical_attrs 100 100 1625    0       0     0     0>
             , <&key_physical_attrs 100 100    0  100       0     0     0>
             , <&key_physical_attrs 150 100  125  100       0     0     0>
@@ -58,7 +57,8 @@
             , <&key_physical_attrs 225 100 1400  200       0     0     0>
             , <&key_physical_attrs 100 100 1625  200       0     0     0>
             , <&key_physical_attrs 100 100    0  300       0     0     0>
-            , <&key_physical_attrs 225 100  125  300       0     0     0>
+            , <&key_physical_attrs 125 100  125  300       0     0     0>
+            , <&key_physical_attrs 100 100  250  300       0     0     0>
             , <&key_physical_attrs 100 100  350  300       0     0     0>
             , <&key_physical_attrs 100 100  450  300       0     0     0>
             , <&key_physical_attrs 100 100  550  300       0     0     0>
@@ -73,12 +73,11 @@
             , <&key_physical_attrs 100 100 1525  300       0     0     0>
             , <&key_physical_attrs 100 100 1625  300       0     0     0>
             , <&key_physical_attrs 100 100    0  400       0     0     0>
-            , <&key_physical_attrs 125 100  125  400       0     0     0>
-            , <&key_physical_attrs 125 100  250  400       0     0     0>
-            , <&key_physical_attrs 125 100  375  400       0     0     0>
-            , <&key_physical_attrs 625 100  500  400       0     0     0>
-            , <&key_physical_attrs 125 100 1125  400       0     0     0>
-            , <&key_physical_attrs 125 100 1250  400       0     0     0>
+            , <&key_physical_attrs 150 100  125  400       0     0     0>
+            , <&key_physical_attrs 100 100  275  400       0     0     0>
+            , <&key_physical_attrs 150 100  375  400       0     0     0>
+            , <&key_physical_attrs 700 100  525  400       0     0     0>
+            , <&key_physical_attrs 150 100 1225  400       0     0     0>
             , <&key_physical_attrs 100 100 1425  400       0     0     0>
             , <&key_physical_attrs 100 100 1525  400       0     0     0>
             , <&key_physical_attrs 100 100 1625  400       0     0     0>
@@ -159,4 +158,29 @@
             ;
     };
     
+    rable65_plus_position_map {
+        compatible = "zmk,physical-layout-position-map";
+
+        complete;
+
+        full_65_layout {
+            physical-layout = <&tsangan_layout>;
+            positions
+                = < 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15>
+                , < 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31>
+                , < 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46>
+                , < 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62>
+                , < 63 64 65 66          67           68 69 70 71>;
+        };
+
+        tsangan_layout {
+            physical-layout = <&tsangan_layout>;
+            positions
+               = <   1  2  3  4  5  6  7  8  9 10 11 12 13 14 >
+                , <  17 18 19 20 21 22 23 24 25 26 27 28 29 30 >
+                , <  33 34 35 36 37 38 39 40 41 42 43 44 45 >
+                , <  48 49 50 51 52 53 54 55 56 57 58 59 60 61 >
+                , <  64 65 66          67           68 69 70 >;
+        };
+    };
 };
