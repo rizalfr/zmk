@@ -28,6 +28,7 @@
 		zephyr,console = &cdc_acm_uart;
         zmk,kscan = &kscan0;
 		zmk,battery = &vbatt;
+        zmk,physical-layout = &full_65_layout;
     };
 
 
