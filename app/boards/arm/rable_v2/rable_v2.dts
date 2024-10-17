@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <layouts/jaykeeb/rable_v2.dtsi>
 
-&layout_0 {
+&full_65_layout {
     transform = <&default_transform>;
 };
 
