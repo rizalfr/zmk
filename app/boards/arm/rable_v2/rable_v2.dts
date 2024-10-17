@@ -13,6 +13,10 @@
     transform = <&default_transform>;
 };
 
+&tsangan_layout {
+    transform = <&default_transform>;
+};
+
 / {
     model = "rable_v2";
     compatible = "rable_v2";
