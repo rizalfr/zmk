@@ -1,7 +1,7 @@
 #include <physical_layouts.dtsi>
 
 / {
-    65_plus: 65_plus {
+    layout_0: layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "65_plus";
 
