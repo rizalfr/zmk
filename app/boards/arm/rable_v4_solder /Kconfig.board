@@ -3,6 +3,6 @@
 # Copyright (c) 2020 Pete Johanson
 # SPDX-License-Identifier: MIT
 
-config BOARD_RABLE_V4
-	bool "rable_v4"
+config BOARD_RABLE_V4_SOLDER
+	bool "rable_v4_solder"
 	depends on SOC_NRF52840_QIAA
