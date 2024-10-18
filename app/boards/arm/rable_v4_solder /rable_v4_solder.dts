@@ -15,8 +15,8 @@
 
 
 / {
-    model = "rable_v4";
-    compatible = "rable_v4";
+    model = "rable_v4_solder";
+    compatible = "rable_v4_solder";
 
     chosen {
         zephyr,code-partition = &code_partition;
