@@ -1,5 +1,5 @@
-identifier: rable_v4
-name: rable_v4
+identifier: rable_v4_solder
+name: rable_v4_solder
 type: keyboard
 arch: arm
 toolchain:
