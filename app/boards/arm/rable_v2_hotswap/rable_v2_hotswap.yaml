@@ -1,5 +1,5 @@
-identifier: rable_v2
-name: rable_v2
+identifier: rable_v2_hotswap
+name: rable_v2_hotswap
 type: keyboard
 arch: arm
 toolchain:
