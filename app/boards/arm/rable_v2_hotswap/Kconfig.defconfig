@@ -23,7 +23,7 @@ config USB_DEVICE_STACK
 endif # USB
 
 config SPI
-	default y
+	default n
 
 config BT_CTLR
 	default BT
