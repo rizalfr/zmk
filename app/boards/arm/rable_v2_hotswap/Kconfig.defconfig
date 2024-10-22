@@ -9,6 +9,9 @@ config BOARD
 config ZMK_KEYBOARD_NAME
 	default "Rable V2 Hotswap"
 
+config BT_DEVICE_NAME 
+	default "Rable V2 Hotswap"
+
 if USB
 
 config USB_NRFX
