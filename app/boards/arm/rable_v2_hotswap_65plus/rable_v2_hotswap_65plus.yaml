@@ -1,0 +1,15 @@
+identifier: RABLE_V2_HOTSWAP_65PLUS_65PLUS_65plus
+name: RABLE_V2_HOTSWAP_65PLUS_65PLUS_65plus
+type: keyboard
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+supported:
+  - adc
+  - usb_device
+  - ble
+  - ieee802154
+  - pwm
+  - watchdog

@@ -7,7 +7,7 @@
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <layouts/jaykeeb/rable_v2_hotswap.dtsi>
+#include <layouts/jaykeeb/RABLE_V2_HOTSWAP_65PLUS_65PLUS_65plus.dtsi>
 
 &full_65_layout {
     transform = <&default_transform>;
@@ -18,8 +18,8 @@
 };
 
 / {
-    model = "rable_v2_hotswap";
-    compatible = "rable_v2_hotswap";
+    model = "RABLE_V2_HOTSWAP_65PLUS_65PLUS_65plus";
+    compatible = "RABLE_V2_HOTSWAP_65PLUS_65PLUS_65plus";
 
     chosen {
         zephyr,code-partition = &code_partition;

@@ -1,0 +1,40 @@
+# Copyright (c) 2020 Pete Johanson
+# SPDX-License-Identifier: MIT
+
+if BOARD_RABLE_V2_HOTSWAP_65PLUS_65PLUS
+
+config BOARD
+	default "RABLE_V2_HOTSWAP_65PLUS_65PLUS_65plus"
+
+config ZMK_KEYBOARD_NAME
+	default "Rable V2 Hotswap"
+
+config BT_DEVICE_NAME 
+	default "Rable V2 Hotswap"
+
+if USB
+
+config USB_NRFX
+	default y
+
+config USB_DEVICE_STACK
+	default y
+
+endif # USB
+
+config SPI
+	default n
+
+config BT_CTLR
+	default BT
+
+config ZMK_BLE
+	default y
+
+config ZMK_USB
+	default y
+
+config ZMK_BATTERY_VOLTAGE_DIVIDER
+	default y
+
+endif # BOARD_RABLE_V2_HOTSWAP_65PLUS_65PLUS
