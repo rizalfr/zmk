@@ -65,8 +65,9 @@
             , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio1 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio1 6  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 7  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 7  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // r7
             , <&gpio1 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 8  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
 
         col-gpios
@@ -77,7 +78,7 @@
             , <&gpio1 0  GPIO_ACTIVE_HIGH >
             , <&gpio1 3  GPIO_ACTIVE_HIGH >
             , <&gpio1 1  GPIO_ACTIVE_HIGH >
-            , <&gpio1 2  GPIO_ACTIVE_HIGH >
+            , <&gpio1 2  GPIO_ACTIVE_HIGH >   // c8
             , <&gpio0 30 GPIO_ACTIVE_HIGH >
             ;
     };
@@ -94,6 +95,36 @@
 			RC(6,0) RC(7,0) RC(6,1) RC(7,1) RC(6,2) RC(7,2) RC(6,3) RC(7,3) RC(6,4) RC(7,4) RC(6,5) RC(7,5) RC(6,6) RC(7,6) RC(6,7)
             RC(0,8) RC(1,8) RC(2,8) RC(3,8) RC(4,8) RC(5,8) RC(6,8) RC(7,8) RC(7,7)
         >;
+    };
+
+    behaviors {
+        hw_soft_off: hw_soft_off {
+            compatible = "zmk,behavior-soft-off";
+            #binding-cells = <0>;
+            split-peripheral-off-on-press; // Turn peripheral off immediately for reliability
+            hold-time-ms = <2000>; // Only turn off if the key is held for 2 seconds or longer.
+        };
+    };
+
+    keys {
+        compatible = "gpio-keys";
+        soft_off_gpio_key: soft_off_gpio_key {
+            gpios = <&gpio1 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        };
+    };
+
+    wakeup_scan: wakeup_scan {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+        trigger = <&soft_off_gpio_key>;
+        wakeup-source;
+        extra-gpios = <&gpio0 7 GPIO_ACTIVE_HIGH >,
+                      <&gpio1 2 GPIO_ACTIVE_HIGH >,
+                      <&gpio1 8 GPIO_ACTIVE_HIGH >;
+    };
+
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&wakeup_scan>;
     };
 };
 
