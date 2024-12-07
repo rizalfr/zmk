@@ -7,7 +7,7 @@ config BOARD
 	default "rable_v5_hotswap"
 
 config ZMK_KEYBOARD_NAME
-	default "Rable60 v5"
+	default "Rable60 V5"
 
 if USB
 
