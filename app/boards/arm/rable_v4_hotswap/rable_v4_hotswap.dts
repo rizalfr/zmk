@@ -83,13 +83,8 @@
             , <&gpio0 7 GPIO_ACTIVE_HIGH >      // C14    
             ;
     };
-            // , <&gpio0 30 GPIO_ACTIVE_HIGH >      // C15
-            // , <&gpio0 31 GPIO_ACTIVE_HIGH >     // C16
-            // , <&gpio0 4 GPIO_ACTIVE_HIGH >     // C17
-            // , <&gpio1 4 GPIO_ACTIVE_HIGH >     // C18
-            // , <&gpio1 6 GPIO_ACTIVE_HIGH >     // C19
-            // , <&gpio0 9 GPIO_ACTIVE_HIGH >     // C20
-            // , <&gpio0 10 GPIO_ACTIVE_HIGH >     // C21
+
+    
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <14>;
@@ -102,6 +97,35 @@
             RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6) RC(3,7) RC(3,8) RC(3,9) RC(3,10) RC(3,11) RC(3,12) RC(3,13) 
             RC(4,0) RC(4,1) RC(4,2) RC(4,6) RC(4,10) RC(4,11) RC(4,12) RC(4,13) 
         >;
+    };
+
+    behaviors {
+        hw_soft_off: hw_soft_off {
+            compatible = "zmk,behavior-soft-off";
+            #binding-cells = <0>;
+            split-peripheral-off-on-press; // Turn peripheral off immediately for reliability
+            hold-time-ms = <2000>; // Only turn off if the key is held for 2 seconds or longer.
+        };
+    };
+
+    keys {
+        compatible = "gpio-keys";
+        soft_off_gpio_key: soft_off_gpio_key {
+            gpios = <&gpio1 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        };
+    };
+
+    wakeup_scan: wakeup_scan {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+        trigger = <&soft_off_gpio_key>;
+        wakeup-source;
+        extra-gpios = <&gpio0 2 GPIO_ACTIVE_HIGH >,
+                      <&gpio1 15 GPIO_ACTIVE_HIGH >;
+    };
+
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&wakeup_scan>;
     };
 };
 
