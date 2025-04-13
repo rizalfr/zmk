@@ -183,7 +183,7 @@ zephyr_udc0: &usbd {
         spi-max-frequency = <4000000>;
 
         /* WS2812 */
-        chain-length = <10>; /* arbitrary; change at will */
+        chain-length = <22>; /* arbitrary; change at will */
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
 
