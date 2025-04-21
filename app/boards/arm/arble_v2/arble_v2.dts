@@ -146,13 +146,14 @@
     status = "okay";
     mosi-pin = <9>; // was 5 in zaphod, 6 in rable byo-mcu
     // Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
-    sck-pin = <10>;
+    sck-pin = <11>;
     miso-pin = <8>;
-    cs-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
+    cs-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>; 7
 
    led_strip: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";
-        label = "ws2812 underglow";
+        label = "SK6812minie";
+
         /* SPI */
         reg = <0>; /* ignored, but necessary for SPI bindings */
         spi-max-frequency = <2000000>;
