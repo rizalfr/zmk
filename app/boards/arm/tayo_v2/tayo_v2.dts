@@ -32,7 +32,7 @@
 		zephyr,console = &cdc_acm_uart;
         zmk,kscan = &kscan0;
 		zmk,battery = &vbatt;
-        zmk,physical-layout = &tsangan_f12_layout;
+        zmk,physical-layout = &ansi_layout;
     };
 
 
