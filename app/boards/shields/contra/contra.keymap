@@ -39,7 +39,7 @@
 
         sym_mods {
             bindings = <
-    &kp GRAVE &kp EXCL  &kp AT   &kp HASH &kp DLLR   &kp PRCNT   &kp CARET &kp AMPS    &kp ASTRK &kp LPAR  &kp RPAR &kp DEL
+    &kp TILDE &kp EXCL  &kp AT   &kp HASH &kp DLLR   &kp PRCNT   &kp CARET &kp AMPS    &kp ASTRK &kp LPAR  &kp RPAR &kp DEL
     &kp TAB   &kp F1    &kp F2   &kp F3   &kp F4      &kp F5     &kp F6    &kp MINUS   &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH
     &kp LSHFT &kp F7    &kp F8   &kp F9   &kp F10     &kp F11    &kp F12   &kp UNDER   &kp PLUS &kp HOME  &kp END  &kp ENTER
     &kp LCTRL &kp LGUI  &kp LALT &trans   &to DEFAULT &kp SPACE  &trans    &mo BT_CTRL &kp LEFT  &kp DOWN &kp UP  &kp RIGHT  
