@@ -9,9 +9,10 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT  0
-#define NUM_MODS 1
-#define SYM_MODS 2
-#define BT_CTRL  3
+#define WINLAY   1
+#define NUM_MODS 2
+#define SYM_MODS 3
+#define BT_CTRL  4
 
 / {
     keymap {
@@ -24,6 +25,15 @@
     &kp TAB   &kp A     &kp S    &kp D     &kp F       &kp G      &kp H     &kp J        &kp K     &kp L     &kp SEMI &kp SQT
     &kp LSHFT &kp Z     &kp X    &kp C     &kp V       &kp B      &kp N     &kp M        &kp COMMA &kp DOT   &kp FSLH &kp ENTER
     &kp LCTRL &kp LCTRL  &kp LALT &kp LGUI  &mo SYM_MODS &kp SPACE  &kp SPACE  &mo NUM_MODS &kp LEFT  &kp DOWN &kp UP  &kp RIGHT  
+            >;
+        };
+
+        win_layer {
+            bindings = <
+    &trans     &trans       &trans       &trans       &trans       &trans       &trans    &trans    &trans     &trans     &trans   &trans
+    &trans     &trans       &trans       &trans       &trans       &trans       &trans    &trans    &trans     &trans     &trans   &trans
+    &trans     &trans       &trans       &trans       &trans       &trans       &trans    &trans    &trans     &trans     &trans   &trans
+    &kp LGUI     &kp LGUI       &trans       &kp LCTRL       &trans       &trans       &trans    &trans    &trans     &trans     &trans   &trans
             >;
         };
 
@@ -50,8 +60,8 @@
             display-name = "Bt Control";
             bindings = <
     &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans    &trans    &trans     &trans     &trans   &trans
-    &trans     &trans       &trans       &trans       &trans       &trans       &trans    &trans    &trans     &trans     &trans   &trans
-    &trans     &trans       &trans       &trans       &trans       &trans       &trans    &trans    &trans     &trans     &trans   &studio_unlock
+    &trans     &to WINLAY   &to DEFAULT      &trans       &trans       &trans       &trans    &trans    &trans     &trans     &trans   &trans
+    &trans     &trans       &trans       &trans       &trans       &trans       &trans    &trans     &trans     &trans     &trans   &studio_unlock
     &trans     &trans       &trans       &trans       &trans       &trans       &trans    &trans    &bt BT_PRV &bt BT_NXT &bootloader   &sys_reset
             >;
         };
