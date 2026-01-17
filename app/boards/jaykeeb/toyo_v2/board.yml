@@ -1,0 +1,5 @@
+board:
+  name: toyo_v2
+  vendor: jaykeeb
+  socs:
+    - name: nrf52840
