@@ -7,7 +7,7 @@
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <layouts/jaykeeb/toyo_v2_hotswap.dtsi>
+#include <layouts/jaykeeb/toyo_v1_hotswap.dtsi>
 
 &ansi_layout {
     transform = <&default_transform>;
