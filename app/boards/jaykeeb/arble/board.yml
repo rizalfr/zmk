@@ -1,0 +1,5 @@
+board:
+  name: arble
+  vendor: jaykeeb
+  socs:
+    - name: nrf52840
