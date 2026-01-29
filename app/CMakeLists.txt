@@ -107,6 +107,7 @@ target_sources_ifdef(CONFIG_ZMK_LOW_PRIORITY_WORK_QUEUE app PRIVATE src/workqueu
 target_sources(app PRIVATE src/main.c)
 
 add_subdirectory(src/display/)
+add_subdirectory(drivers)
 add_subdirectory_ifdef(CONFIG_SETTINGS src/settings/)
 
 if (CONFIG_ZMK_STUDIO_RPC)

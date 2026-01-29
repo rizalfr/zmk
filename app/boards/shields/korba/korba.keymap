@@ -53,12 +53,26 @@
                         >;
                 };
 
-                extra1 {
-                status = "reserved";
+                layer_3 {
+                        bindings = <
+   &soft_off    &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans
+   &trans       &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans
+   &trans       &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans
+                              &trans     &trans     &trans       &trans     &trans     &trans
+                        >;
                 };
 
                 extra2 {
                 status = "reserved";
                 };
         };
+
+    
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
 };

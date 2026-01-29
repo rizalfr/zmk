@@ -1,0 +1,107 @@
+description: PixArt PMW3610 Low Power Laser Mouse Sensor w/o motion burst support
+
+compatible: "pixart,pmw3610-alt"
+
+include: spi-device.yaml
+
+properties:
+    irq-gpios:
+      type: phandle-array
+      required: true
+      description: |
+        The gpio interrupt ping.
+        The pin is active low.
+
+    cpi:
+      type: int
+      required: false
+      default: 1200
+      description: |
+        Sensor CPI (Counts Per Inch).
+        From 200 to 3200 cpi, step size is 200 cpi.
+        Default is 1200 cpi.
+
+    evt-type:
+      type: int
+      required: false
+      default: 0
+      description: |
+        Input event type.
+        Default is 0 (EV_SYN).
+        See include/zephyr/dt-bindings/input/input-event-codes.h
+
+    x-input-code:
+      type: int
+      required: false
+      default: 0
+      description: |
+        Input event code for X axis.
+        Default is 0 (REL_X).
+        See include/zephyr/dt-bindings/input/input-event-codes.h
+
+    y-input-code:
+      type: int
+      required: false
+      default: 1
+      description: |
+        Input event code for Y axis.
+        Default is 1 (REL_Y).
+        See include/zephyr/dt-bindings/input/input-event-codes.h
+
+    swap-xy:
+      type: boolean
+      required: false
+      description: Swap X and Y axis.
+
+    invert-x:
+      type: boolean
+      required: false
+      description: Invert X axis.
+
+    invert-y:
+      type: boolean
+      required: false
+      description: Invert Y axis.
+
+    force-awake:
+      type: boolean
+      required: false
+      description: |
+        Force the sensor to stay awake (RUN mode).
+        This consumes more power but provides better responsiveness.
+
+    force-awake-4ms-mode:
+      type: boolean
+      required: false
+      description: |
+        Force the sensor to use 4ms polling rate in RUN mode.
+        Default is 8ms.
+        This consumes more power but provides better responsiveness.
+        Only effective when force-awake is enabled.
+
+    smart-algorithm:
+      type: boolean
+      required: false
+      description: |
+        Enable the smart algorithm (datasheet feature) to improve tracking.
+
+    run-downshift-time-ms:
+      type: int
+      required: false
+      description: |
+        Time (ms) in RUN mode before downshifting to REST1.
+        Default is 128ms.
+
+    rest1-downshift-time-ms:
+      type: int
+      required: false
+      description: |
+        Time (ms) in REST1 mode before downshifting to REST2.
+        Default is 5000ms.
+
+    rest2-downshift-time-ms:
+      type: int
+      required: false
+      description: |
+        Time (ms) in REST2 mode before downshifting to REST3.
+        Default is 17000ms.

@@ -700,6 +700,8 @@ rsource "boards/Kconfig"
 rsource "boards/shields/*/Kconfig.defconfig"
 rsource "boards/shields/*/Kconfig.shield"
 
+rsource "drivers/Kconfig"
+
 # This loads custom shields defconfigs (from BOARD_ROOT)
 # Duplicated from Kconfig.zephyr
 osource "$(KCONFIG_BINARY_DIR)/Kconfig.shield.defconfig"
