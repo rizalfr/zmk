@@ -1,0 +1,12 @@
+file_format: "1"
+id: rable_v5_hs_hs
+name: Rable V5 Hotswap
+type: board
+arch: arm
+features:
+  - keys
+  - studio
+outputs:
+  - usb
+  - ble
+url: https://jaykeeb.id

@@ -1,0 +1,13 @@
+file_format: "1"
+id: rable_v5
+name: Rable V5 Soldered
+type: board
+arch: arm
+features:
+  - keys
+  - encoder
+  - studio
+outputs:
+  - usb
+  - ble
+url: https://jaykeeb.id
