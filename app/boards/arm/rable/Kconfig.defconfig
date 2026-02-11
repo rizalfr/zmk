@@ -4,7 +4,7 @@
 if BOARD_RABLE_V5_HS || BOARD_RABLE_V5
 
 config BOARD
-    default "Rable V5"
+    default "Rable"
 
 if USB
 
