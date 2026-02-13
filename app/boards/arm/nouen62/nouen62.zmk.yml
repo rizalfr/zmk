@@ -1,0 +1,13 @@
+file_format: "1"
+id: nouen62
+name: nouen62
+type: board
+arch: arm
+features:
+  - keys
+  - underglow
+  - studio
+outputs:
+  - usb
+  - ble
+url: https://jaykeeb.id
