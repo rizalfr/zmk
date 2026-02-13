@@ -40,6 +40,11 @@
 		full-ohms = <(2000000 + 806000)>;
 	};
 
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&kscan0>;
+    };
+
     // Encoder
     encoder_1: encoder_1 {
         compatible = "alps,ec11";
@@ -59,6 +64,7 @@
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
+        wakeup-source;
         diode-direction = "col2row";
 
         row-gpios
