@@ -35,7 +35,7 @@
         &kp CAPS &trans &trans &trans &sys_reset &studio_unlock &trans &bootloader &kp PSCRN &kp SLCK &kp PAUSE_BREAK &kp UP &trans &kp BSPC
         &mo BT &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &kp C_EJECT &trans &kp KP_MULTIPLY &kp KP_DIVIDE &kp HOME &kp PG_UP &kp LEFT &kp RIGHT &trans
         &trans &trans &trans &trans &trans &trans &trans &kp KP_PLUS &kp KP_MINUS &kp END &kp PG_DN &kp DOWN &trans &trans
-        &trans   &trans   &trans                                   &trans    &trans &trans                                     &trans      &trans    &trans   &trans   
+        &trans   &trans   &trans                           &trans    &trans &trans                        &trans      &trans    &trans   &trans   
       >;
     };
     
@@ -45,7 +45,7 @@
         &bootloader &trans    &trans    &trans    &trans    &trans    &trans    &out OUT_USB  &trans    &trans    &kp PRINTSCREEN &trans    &trans    &trans   
         &trans      &bt BT_CLR_ALL  &soft_off  &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans   
         &trans      &trans    &trans    &trans    &bt BT_CLR  &trans    &out OUT_BLE  &trans    &trans    &trans    &trans    &trans    &trans    &trans    
-        &trans   &trans   &trans                                   &trans &trans &trans                                         &trans   &trans     &trans   &trans 
+        &trans   &trans   &trans                         &trans &trans &trans                           &trans   &trans     &trans   &trans 
       >;
     };
 
