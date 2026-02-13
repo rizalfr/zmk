@@ -1,6 +1,6 @@
 identifier: nouen62
 name: nouen62
-type: keyboard
+type: mcu
 arch: arm
 toolchain:
   - zephyr
