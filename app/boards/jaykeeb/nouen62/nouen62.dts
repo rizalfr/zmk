@@ -7,6 +7,12 @@
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <layouts/jaykeeb/nouen62_hotswap.dtsi>
+
+&arrow_tsangan_layout {
+    transform = <&matrix_transform_0>;
+};
+
 
 / {
     model = "nouen62";
@@ -20,6 +26,7 @@
         zmk,kscan = &kscan0;
 		zmk,battery = &vbatt;
         zmk,matrix_transform = &default_transform;
+        zmk,physical-layout = &arrow_tsangan_layout;
     };
 
     vbatt: vbatt {
@@ -77,7 +84,7 @@
             ;
     };
 
-    default_transform: keymap_transform_0 {
+    default_transform: matrix_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <16>;
         rows = <5>;
