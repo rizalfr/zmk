@@ -12,8 +12,9 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #define DEFAULT 0
-#define FN 1
-#define BT 2
+#define WIN 1
+#define FN 2
+#define BT 3
 
 / {
   keymap {
@@ -23,16 +24,26 @@
       bindings = <
         &gresc     &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8     &kp N9   &kp N0    &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE  
         &kp TAB    &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I      &kp O    &kp P     &kp LBKT   &kp RBKT       &kp BSPC        
-        &kp CLCK   &kp A    &kp S  &kp D    &kp F    &kp G    &kp H    &kp J    &kp K      &kp L    &kp SEMI  &kp SQT           &kp RET                   
+        &kp LCTRL   &kp A    &kp S  &kp D    &kp F    &kp G    &kp H    &kp J    &kp K      &kp L    &kp SEMI  &kp SQT           &kp RET                   
         &kp LSHFT  &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH         &kp UP  &kp RSHFT     
-        &kp LCTRL  &kp LALT &kp LGUI                    &kp SPACE   &kp SPACE   &kp SPACE                &mo FN    &kp LEFT   &kp DOWN  &kp RIGHT
+        &kp LALT  &kp LALT &kp LGUI                    &kp SPACE   &kp SPACE   &kp SPACE                &mo FN    &kp LEFT   &kp DOWN  &kp RIGHT
+      >;
+    };
+
+    win_layer {
+      bindings = <
+        &gresc     &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8     &kp N9   &kp N0    &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE  
+        &kp TAB    &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I      &kp O    &kp P     &kp LBKT   &kp RBKT       &kp BSPC        
+        &kp LGUI   &kp A    &kp S  &kp D    &kp F    &kp G    &kp H    &kp J    &kp K      &kp L    &kp SEMI  &kp SQT           &kp RET                   
+        &kp LSHFT  &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH         &kp UP  &kp RSHFT     
+        &kp LALT  &kp LALT &kp LCTRL                    &kp SPACE   &kp SPACE   &kp SPACE                &mo FN    &kp LEFT   &kp DOWN  &kp RIGHT
       >;
     };
 
     fn_layer {
       bindings = <
         &kp K_POWER &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp INS &kp DEL
-        &kp CAPS &trans &trans &trans &sys_reset &studio_unlock &trans &bootloader &kp PSCRN &kp SLCK &kp PAUSE_BREAK &kp UP &trans &kp BSPC
+        &kp CAPS &trans &tog WIN &trans &sys_reset &studio_unlock &trans &bootloader &kp PSCRN &kp SLCK &kp PAUSE_BREAK &kp UP &trans &kp BSPC
         &mo BT &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &kp C_EJECT &trans &kp KP_MULTIPLY &kp KP_DIVIDE &kp HOME &kp PG_UP &kp LEFT &kp RIGHT &trans
         &trans &trans &trans &trans &trans &trans &trans &kp KP_PLUS &kp KP_MINUS &kp END &kp PG_DN &kp DOWN &trans &trans
         &trans   &trans   &trans                           &trans    &trans &trans                        &trans      &trans    &trans   &trans   
