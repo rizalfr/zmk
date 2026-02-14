@@ -1,0 +1,13 @@
+file_format: "1"
+id: toyo
+name: toyo
+type: board
+arch: arm
+features:
+  - keys
+  - underglow
+  - studio
+outputs:
+  - usb
+  - ble
+url: https://jaykeeb.id
