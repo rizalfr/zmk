@@ -29,7 +29,7 @@
       bindings = <
         &studio_unlock      &trans     &trans   &trans   &trans   &trans    &trans   &trans   &trans      &trans    &trans     &trans     &trans    &trans    &trans 
         &sys_reset  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans  &kp F11  &kp F2  &kp F4  &trans  &trans  
-        &bootloader &trans    &trans   &trans    &trans   &trans   &trans    &out OUT_USB  &trans  &trans  &kp PRINTSCREEN  &trans  &trans  &trans  &trans 
+        &bootloader &trans    &soft_off   &trans    &trans   &trans   &trans    &out OUT_USB  &trans  &trans  &kp PRINTSCREEN  &trans  &trans  &trans  &trans 
         &trans      &bt BT_CLR_ALL  &soft_off  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  
         &trans      &trans  &trans  &trans  &bt BT_CLR  &trans  &out OUT_BLE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  
         &trans  &trans  &trans  &trans  &trans    &trans   &trans        &trans   &trans    
