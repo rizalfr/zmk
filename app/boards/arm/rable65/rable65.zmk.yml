@@ -1,0 +1,13 @@
+file_format: "1"
+id: rable65
+name: Rable 65 Hotswap
+type: board
+arch: arm
+features:
+  - keys
+  - encoder
+  - studio
+outputs:
+  - usb
+  - ble
+url: https://jaykeeb.id
