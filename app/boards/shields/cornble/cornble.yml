@@ -1,0 +1,13 @@
+file_format: "1"
+id: cornble
+name: Cornble
+type: shield
+url: https://github.com/jaykeeb/crkbd/
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - studio
+siblings:
+  - cornble_left
+  - cornble_right
