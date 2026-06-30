@@ -1,0 +1,13 @@
+if SHIELD_CORNBLE_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Cornble"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_CORNBLE_LEFT || SHIELD_CORNBLE_RIGHT
+
+endif
