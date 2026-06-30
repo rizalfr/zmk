@@ -1,6 +1,8 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
+rsource "pmw3610/Kconfig"
+
 if SENSOR
 
 rsource "battery/Kconfig"
