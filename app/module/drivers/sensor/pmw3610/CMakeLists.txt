@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 zephyr_include_directories(.)
+zephyr_include_directories(${APPLICATION_SOURCE_DIR}/include)
 
 zephyr_library()
 

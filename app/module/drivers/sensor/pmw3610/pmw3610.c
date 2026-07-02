@@ -13,7 +13,9 @@
 #include <zephyr/kernel.h>
 #include <zephyr/sys/byteorder.h>
 #include <zephyr/input/input.h>
+#if !defined(CONFIG_ZMK_SPLIT) || defined(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
 #include <zmk/keymap.h>
+#endif
 #include "pmw3610.h"
 
 #include <zephyr/logging/log.h>
@@ -543,6 +545,7 @@ static void pmw3610_async_init(struct k_work *work) {
 }
 
 #define AUTOMOUSE_LAYER (DT_PROP(DT_DRV_INST(0), automouse_layer))
+#if !defined(CONFIG_ZMK_SPLIT) || defined(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
 #if AUTOMOUSE_LAYER > 0
 struct k_timer automouse_layer_timer;
 static bool automouse_triggered = false;
@@ -576,6 +579,11 @@ static enum pixart_input_mode get_input_mode_for_current_layer(const struct devi
     }
     return MOVE;
 }
+#else
+static enum pixart_input_mode get_input_mode_for_current_layer(const struct device *dev) {
+    return MOVE;
+}
+#endif
 
 static int pmw3610_report_data(const struct device *dev) {
     struct pixart_data *data = dev->data;
@@ -612,12 +620,14 @@ static int pmw3610_report_data(const struct device *dev) {
 
     data->curr_mode = input_mode;
 
+#if !defined(CONFIG_ZMK_SPLIT) || defined(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
 #if AUTOMOUSE_LAYER > 0
     if (input_mode == MOVE &&
             (automouse_triggered || zmk_keymap_highest_layer_active() != AUTOMOUSE_LAYER)
     ) {
         activate_automouse_layer();
     }
+#endif
 #endif
 
     int err = motion_burst_read(dev, buf, sizeof(buf));
