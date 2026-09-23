@@ -3,11 +3,12 @@ id: tayo_x
 name: Tayo X
 type: board
 arch: arm
-vendor: jaykeeb
+url: https://jaykeeb.com
 features:
   - keys
   - encoder
   - underglow
-  - battery
-url: https://jaykeeb.com
-exposes: []
+  - studio
+outputs:
+  - usb
+  - ble
