@@ -9,6 +9,9 @@ CONFIG_ARM_MPU=y
 # enable GPIO
 CONFIG_GPIO=y
 
+# Enable LED driver (required for indicator LEDs)
+CONFIG_LED=y
+
 CONFIG_ZMK_SLEEP=y
 
 CONFIG_USE_DT_CODE_PARTITION=y

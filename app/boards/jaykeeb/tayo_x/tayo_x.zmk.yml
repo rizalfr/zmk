@@ -1,0 +1,13 @@
+file_format: "1"
+id: tayo_x
+name: Tayo X
+type: board
+arch: arm
+vendor: jaykeeb
+features:
+  - keys
+  - encoder
+  - underglow
+  - battery
+url: https://jaykeeb.com
+exposes: []

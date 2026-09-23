@@ -37,6 +37,34 @@
     };
 
 
+    // GPIO LEDs for indicators
+    leds: leds {
+        compatible = "gpio-leds";
+        caps_lock_led: caps_lock_led {
+            gpios = <&gpio1 4 GPIO_ACTIVE_HIGH>;
+            label = "Caps Lock LED";
+        };
+        scroll_lock_led: scroll_lock_led {
+            gpios = <&gpio0 26 GPIO_ACTIVE_HIGH>;
+            label = "Scroll Lock LED";
+        };
+    };
+
+    // HID Indicator LED controller
+    indicator_leds: indicator_leds {
+        compatible = "zmk,indicator-leds";
+
+        caps_lock_indicator: caps_lock_indicator {
+            leds = <&caps_lock_led>;
+            indicator = <HID_INDICATOR_CAPS_LOCK>;
+        };
+
+        scroll_lock_indicator: scroll_lock_indicator {
+            leds = <&scroll_lock_led>;
+            indicator = <HID_INDICATOR_SCROLL_LOCK>;
+        };
+    };
+
     vbatt: vbatt {
 		compatible = "zmk,battery-voltage-divider";
 		label = "BATTERY";
