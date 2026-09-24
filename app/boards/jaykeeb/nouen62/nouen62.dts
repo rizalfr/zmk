@@ -89,7 +89,7 @@
 
     default_transform: matrix_transform_0 {
         compatible = "zmk,matrix-transform";
-        columns = <16>;
+        columns = <14>;
         rows = <5>;
 
         map = <
@@ -103,7 +103,7 @@
 
     matrix_transform_1: matrix_transform_1 {
         compatible = "zmk,matrix-transform";
-        columns = <16>;
+        columns = <14>;
         rows = <5>;
 
         map = <
@@ -114,6 +114,10 @@
             RC(4,0) RC(4,2) RC(4,6) RC(4,10) RC(4,11) RC(4,12) RC(4,13) 
         >;
     };
+};
+
+&reg1 {
+    regulator-initial-mode = <NRF5X_REG_MODE_DCDC>;
 };
 
 &adc {
