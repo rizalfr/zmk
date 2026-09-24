@@ -1,0 +1,5 @@
+board:
+  name: tayo_x
+  vendor: jaykeeb
+  socs:
+    - name: nrf52840
