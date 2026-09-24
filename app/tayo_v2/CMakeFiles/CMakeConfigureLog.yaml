@@ -1,0 +1,1060 @@
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/cmake/modules/zephyr_default.cmake:28 (find_package)"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:9 (find_package)"
+    name: "ZephyrBuildConfiguration"
+    configs:
+      -
+        filename: "ZephyrBuild.cps"
+        kind: "cps"
+      -
+        filename: "zephyrbuild.cps"
+        kind: "cps"
+      -
+        filename: "ZephyrBuildConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "zephyrbuild-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: false
+      bypass_provider: false
+      names:
+        - "ZephyrBuild"
+      search_paths:
+        - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/../*"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: false
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: false
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: false
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/docs/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/docs/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/docs/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/docs/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/docs/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/docs/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.devcontainer/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.devcontainer/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.devcontainer/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.devcontainer/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.devcontainer/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.devcontainer/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/optional/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/optional/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/optional/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/optional/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/optional/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/optional/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/schema/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/schema/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/schema/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/schema/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/schema/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/schema/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.venv/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.venv/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.venv/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.venv/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.venv/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.venv/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.github/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.github/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.github/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.github/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.github/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.github/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.west/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.west/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.west/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.west/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.west/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.west/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/build/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/build/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/build/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/build/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/build/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/build/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.git/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.git/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.git/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.git/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.git/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.git/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.vscode/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.vscode/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.vscode/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.vscode/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.vscode/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/.vscode/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/modules/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/modules/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/modules/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/modules/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/modules/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/modules/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/cmake/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/cmake/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/libexec"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/python-build/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/pyenv-binary/bin"
+        - "/Users/zacksupreme/.pyenv/versions/3.14.2/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/libexec"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/python-build/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/pyenv-binary/bin"
+        - "/Users/zacksupreme/.pyenv/shims"
+        - "/Users/zacksupreme/bin"
+        - "/Users/zacksupreme/.local/bin"
+        - "/usr/local/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Users/zacksupreme/bin"
+        - "/Users/zacksupreme/.local/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/cmake/modules/zephyr_default.cmake:41 (find_package)"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:9 (find_package)"
+    name: "ZephyrAppConfiguration"
+    configs:
+      -
+        filename: "ZephyrApp.cps"
+        kind: "cps"
+      -
+        filename: "zephyrapp.cps"
+        kind: "cps"
+      -
+        filename: "ZephyrAppConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "zephyrapp-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: false
+      bypass_provider: false
+      names:
+        - "ZephyrApp"
+      search_paths:
+        - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: false
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: false
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: false
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/ZephyrAppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/zephyrapp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/lib/cps/ZephyrApp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/lib/cps/zephyrapp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/share/cps/ZephyrApp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/share/cps/zephyrapp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/ZephyrAppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/zephyrapp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/lib/cps/ZephyrApp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/lib/cps/zephyrapp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/share/cps/ZephyrApp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/share/cps/zephyrapp.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/libexec"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/python-build/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/pyenv-binary/bin"
+        - "/Users/zacksupreme/.pyenv/versions/3.14.2/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/libexec"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/python-build/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/pyenv-binary/bin"
+        - "/Users/zacksupreme/.pyenv/shims"
+        - "/Users/zacksupreme/bin"
+        - "/Users/zacksupreme/.local/bin"
+        - "/usr/local/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Users/zacksupreme/bin"
+        - "/Users/zacksupreme/.local/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/cmake/modules/ccache.cmake:10 (find_program)"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/cmake/modules/zephyr_default.cmake:129 (include)"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "program"
+    variable: "CCACHE_FOUND"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ccache"
+    candidate_directories:
+      - "/opt/homebrew/Cellar/pyenv/2.8.4/libexec/"
+      - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/python-build/bin/"
+      - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/pyenv-binary/bin/"
+      - "/Users/zacksupreme/.pyenv/versions/3.14.2/bin/"
+      - "/Users/zacksupreme/.pyenv/shims/"
+      - "/Users/zacksupreme/bin/"
+      - "/Users/zacksupreme/.local/bin/"
+      - "/usr/local/bin/"
+      - "/opt/homebrew/opt/python/libexec/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+    searched_directories:
+      - "/opt/homebrew/Cellar/pyenv/2.8.4/libexec/ccache"
+      - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/python-build/bin/ccache"
+      - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/pyenv-binary/bin/ccache"
+      - "/Users/zacksupreme/.pyenv/versions/3.14.2/bin/ccache"
+      - "/Users/zacksupreme/.pyenv/shims/ccache"
+      - "/Users/zacksupreme/bin/ccache"
+      - "/Users/zacksupreme/.local/bin/ccache"
+      - "/usr/local/bin/ccache"
+      - "/opt/homebrew/opt/python/libexec/bin/ccache"
+    found: "/opt/homebrew/bin/ccache"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/libexec"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/python-build/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/pyenv-binary/bin"
+        - "/Users/zacksupreme/.pyenv/versions/3.14.2/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/libexec"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/python-build/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/pyenv-binary/bin"
+        - "/Users/zacksupreme/.pyenv/shims"
+        - "/Users/zacksupreme/bin"
+        - "/Users/zacksupreme/.local/bin"
+        - "/usr/local/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Users/zacksupreme/bin"
+        - "/Users/zacksupreme/.local/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "keymap-module/modules/modules.cmake:95 (find_path)"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/cmake/modules/zephyr_module.cmake:130 (include)"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/cmake/modules/zephyr_default.cmake:129 (include)"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "path"
+    variable: "BOARD_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "_defconfig"
+    candidate_directories:
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/romac_plus/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/splitreus62/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/lotus58/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/posix_seeed_xiao/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/elephant42/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/pancake/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/bfo9000/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/splitkb_aurora_lily58/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/lily58/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/osprette/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/cradio/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/reviung5/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/contra/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/reviung53/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/knob_goblin/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/qaz/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/murphpad/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/redox/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/a_dux/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/iris/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/nice_view_adapter/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/tg4x/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/reviung41/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/romac/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/fourier/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/jorne/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/minivan_studio_tester/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/jian/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/clog/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/korba/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/zodiark/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/boardsource5x12/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/eternal_keypad/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/zmk_uno/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/naked60/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/eek/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/quefrency/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/waterfowl/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/hummingbird/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/splitkb_aurora_corne/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/leeloo_micro/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/bat43/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/corne/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/chalice/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/boardsource3x4/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/jiran/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/crbn/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/tidbit/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/nice_view/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/splitkb_aurora_sweep/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/tester_xiao/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/clueboard_california/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/ergodash/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/snap/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/nibble/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/m60/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/tester_pro_micro/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/reviung34/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/helix/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/two_percent_milk/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/splitkb_aurora_helix/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/posix_pro_micro/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/microdox/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/kyria/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/splitkb_aurora_sofle/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/sofle/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/settings_reset/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/leeloo/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/interconnects/pro_micro/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/interconnects/blackpill/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/interconnects/arduino_uno/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/interconnects/seeed_xiao/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/interconnects/makerdiary_nrf52840_m2/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/seeeduino_xiao_ble/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/adafruit_qt_py_rp2040/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/planck/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/bdn9/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/mikoto/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/bluemicro840/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/glove80/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/nrf5340dk_nrf5340_cpuapp/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/adafruit_kb2040/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/preonic/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/rable65/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/tayo/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/s40nc/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/toyo_v2/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/toyo/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/nrf52840_m2/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/seeeduino_xiao_rp2040/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/nice_nano/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/nrfmicro/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/ckp/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/pillbug/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/blackpill_f401cc/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/adv360pro/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/nice60/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/bt60/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/blackpill_f401ce/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/blackpill_f411ce/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/kbdfans_tofu65/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/puchi_ble/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/rable/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/nrf52840dk_nrf52840/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/boardsource_blok/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/corneish_zen/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/sparkfun_pro_micro_rp2040/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/nouen62/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/dz60rgb/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/proton_c/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/ferris/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/tayo_v2/"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/seeeduino_xiao/"
+    searched_directories:
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/romac_plus/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/splitreus62/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/lotus58/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/posix_seeed_xiao/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/elephant42/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/pancake/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/bfo9000/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/splitkb_aurora_lily58/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/lily58/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/osprette/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/cradio/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/reviung5/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/contra/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/reviung53/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/knob_goblin/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/qaz/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/murphpad/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/redox/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/a_dux/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/iris/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/nice_view_adapter/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/tg4x/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/reviung41/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/romac/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/fourier/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/jorne/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/minivan_studio_tester/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/jian/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/clog/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/korba/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/zodiark/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/boardsource5x12/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/eternal_keypad/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/zmk_uno/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/naked60/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/eek/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/quefrency/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/waterfowl/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/hummingbird/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/splitkb_aurora_corne/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/leeloo_micro/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/bat43/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/corne/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/chalice/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/boardsource3x4/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/jiran/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/crbn/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/tidbit/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/nice_view/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/splitkb_aurora_sweep/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/tester_xiao/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/clueboard_california/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/ergodash/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/snap/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/nibble/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/m60/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/tester_pro_micro/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/reviung34/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/helix/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/two_percent_milk/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/splitkb_aurora_helix/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/posix_pro_micro/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/microdox/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/kyria/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/splitkb_aurora_sofle/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/sofle/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/settings_reset/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/shields/leeloo/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/interconnects/pro_micro/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/interconnects/blackpill/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/interconnects/arduino_uno/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/interconnects/seeed_xiao/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/interconnects/makerdiary_nrf52840_m2/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/seeeduino_xiao_ble/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/adafruit_qt_py_rp2040/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/planck/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/bdn9/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/mikoto/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/bluemicro840/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/glove80/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/nrf5340dk_nrf5340_cpuapp/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/adafruit_kb2040/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/preonic/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/rable65/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/tayo/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/s40nc/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/toyo_v2/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/toyo/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/nrf52840_m2/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/seeeduino_xiao_rp2040/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/nice_nano/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/nrfmicro/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/ckp/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/pillbug/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/blackpill_f401cc/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/adv360pro/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/nice60/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/bt60/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/blackpill_f401ce/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/blackpill_f411ce/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/kbdfans_tofu65/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/puchi_ble/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/rable/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/nrf52840dk_nrf52840/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/boardsource_blok/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/corneish_zen/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/sparkfun_pro_micro_rp2040/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/nouen62/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/dz60rgb/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/proton_c/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/ferris/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/tayo_v2/_defconfig"
+      - "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/boards/arm/seeeduino_xiao/_defconfig"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/libexec"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/python-build/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/pyenv-binary/bin"
+        - "/Users/zacksupreme/.pyenv/versions/3.14.2/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/libexec"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/python-build/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/pyenv-binary/bin"
+        - "/Users/zacksupreme/.pyenv/shims"
+        - "/Users/zacksupreme/bin"
+        - "/Users/zacksupreme/.local/bin"
+        - "/usr/local/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Users/zacksupreme/bin"
+        - "/Users/zacksupreme/.local/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:9 (find_package)"
+    name: "Zephyr"
+    configs:
+      -
+        filename: "Zephyr.cps"
+        kind: "cps"
+      -
+        filename: "zephyr.cps"
+        kind: "cps"
+      -
+        filename: "ZephyrConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "zephyr-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "../zephyr"
+      names:
+        - "Zephyr"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/lib/cps/Zephyr.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/lib/cps/zephyr.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/share/cps/Zephyr.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/app/tayo_v2/CMakeFiles/pkgRedirects/share/cps/zephyr.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/cmake/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/cmake/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/lib/cps/Zephyr.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/lib/cps/zephyr.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/cps/Zephyr.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/cps/zephyr.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyrunittest-package/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyrunittest-package/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyr-package/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyr-package/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyrunittest-package/cmake/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyrunittest-package/cmake/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/Users/zacksupreme/Documents/Keyboard/Firmware/zmk/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake"
+      mode: "config"
+      version: "3.5.0"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/libexec"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/python-build/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/pyenv-binary/bin"
+        - "/Users/zacksupreme/.pyenv/versions/3.14.2/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/libexec"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/python-build/bin"
+        - "/opt/homebrew/Cellar/pyenv/2.8.4/plugins/pyenv-binary/bin"
+        - "/Users/zacksupreme/.pyenv/shims"
+        - "/Users/zacksupreme/bin"
+        - "/Users/zacksupreme/.local/bin"
+        - "/usr/local/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Users/zacksupreme/bin"
+        - "/Users/zacksupreme/.local/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+...
