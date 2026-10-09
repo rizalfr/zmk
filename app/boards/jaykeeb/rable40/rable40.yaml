@@ -1,0 +1,12 @@
+identifier: rable40
+name: Rable40
+type: keyboard
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+supported:
+  - adc
+  - usb_device
+  - ble
+  - watchdog

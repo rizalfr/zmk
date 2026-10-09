@@ -1,0 +1,5 @@
+board:
+  name: rable40
+  vendor: jaykeeb
+  socs:
+    - name: nrf52840

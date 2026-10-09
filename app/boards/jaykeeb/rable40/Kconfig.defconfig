@@ -1,13 +1,13 @@
 # Copyright (c) 2020 Pete Johanson
 # SPDX-License-Identifier: MIT
 
-if BOARD_TAYO_V2
+if BOARD_RABLE40
 
 config BOARD
-	default "tayo_v2"
+	default "rable40"
 
 config ZMK_KEYBOARD_NAME
-	default "Tayo (Rable88)"
+	default "rable40"
 
 if USB
 
@@ -18,9 +18,6 @@ config USB_DEVICE_STACK
 	default y
 
 endif # USB
-
-config SPI
-	default y
 
 config BT_CTLR
 	default BT
@@ -34,4 +31,4 @@ config ZMK_USB
 config ZMK_BATTERY_VOLTAGE_DIVIDER
 	default y
 
-endif # BOARD_TAYO_V2
+endif # BOARD_RABLE40
