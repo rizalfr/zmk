@@ -19,7 +19,13 @@ Definition file: [zmk/app/Kconfig](https://github.com/zmkfirmware/zmk/blob/main/
 | `CONFIG_ZMK_IDLE_TIMEOUT`       | int  | Milliseconds of inactivity before entering idle state               | 30000   |
 | `CONFIG_ZMK_SLEEP`              | bool | Enable deep sleep support                                           | n       |
 | `CONFIG_ZMK_IDLE_SLEEP_TIMEOUT` | int  | Milliseconds of inactivity before entering deep sleep               | 900000  |
+| `CONFIG_ZMK_SLEEP_USE_SOFT_OFF` | bool | Use soft-off wakeup sources when the deep sleep timeout expires     | n       |
 | `CONFIG_ZMK_PM_SOFT_OFF`        | bool | Enable soft off functionality from the keymap or dedicated hardware | n       |
+
+`CONFIG_ZMK_SLEEP_USE_SOFT_OFF` requires `CONFIG_ZMK_SLEEP` and enables soft off
+support. It keeps the normal inactivity timeout and USB power check, but wakes
+using only the devices listed in `zmk,soft-off-wakeup-sources`. Configure a wakeup
+source before enabling this option; otherwise, waking requires a reset.
 
 ## External Power Control
 

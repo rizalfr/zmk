@@ -54,6 +54,26 @@
         sensors = <&encoder_1>;
     };
 
+    // Only the physical G switch (RC(2,5)) wakes automatic deep sleep.
+    keys {
+        compatible = "gpio-keys";
+        sleep_wake_g: sleep_wake_g {
+            gpios = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        };
+    };
+
+    sleep_wakeup: sleep_wakeup {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+        trigger = <&sleep_wake_g>;
+        wakeup-source;
+        extra-gpios = <&gpio0 26 GPIO_ACTIVE_HIGH>;
+    };
+
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&sleep_wakeup>;
+    };
+
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";

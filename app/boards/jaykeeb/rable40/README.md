@@ -47,6 +47,9 @@ as in the original remap configuration.
 
 ## Hardware and layout notes
 
+- Automatic deep sleep starts after 15 minutes without activity while USB power
+  is disconnected. Both automatic sleep and manual soft off wake only from the
+  physical G switch (matrix R1 C5), regardless of its Studio key binding.
 - The default Studio layout is **All bottom-row switches (12 matrix positions)**:
   48 electrical positions, including all 12 bottom-row circuits verified from
   the supplied Gerbers. The bottom row uses 1u boxes in column order as an

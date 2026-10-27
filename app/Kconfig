@@ -417,6 +417,14 @@ config ZMK_IDLE_SLEEP_TIMEOUT
     int "Milliseconds of inactivity before entering deep sleep"
     default 900000
 
+config ZMK_SLEEP_USE_SOFT_OFF
+    bool "Use soft-off wakeup sources for automatic deep sleep"
+    select ZMK_PM_SOFT_OFF
+    help
+      Enter soft off when the idle sleep timeout expires, using the devices
+      listed in zmk,soft-off-wakeup-sources instead of the normal kscan wakeup
+      sources. Without a configured wakeup source, waking requires a reset.
+
 endif # ZMK_SLEEP
 
 config ZMK_EXT_POWER
