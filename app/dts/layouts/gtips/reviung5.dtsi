@@ -1,0 +1,25 @@
+/*
+ * Copyright (c) 2026 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <physical_layouts.dtsi>
+
+/ {
+    gtips_reviung5_layout: gtips_reviung5_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "REVIUNG5";
+
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    0    0       0     0     0>
+            , <&key_physical_attrs 100 100  100   25       0     0     0>
+            , <&key_physical_attrs 100 100  200   25       0     0     0>
+            , <&key_physical_attrs 100 100  300   25       0     0     0>
+            , <&key_physical_attrs 100 100  400    0       0     0     0>
+            // Virtual encoder directions, shown to the right of the fifth key.
+            , <&key_physical_attrs 50 50  525    0       0     0     0> // CCW
+            , <&key_physical_attrs 50 50  525   50       0     0     0> // CW
+            ;
+    };
+};

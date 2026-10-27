@@ -1,0 +1,60 @@
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/matrix_transform.h>
+#include <layouts/gtips/reviung5.dtsi>
+
+&gtips_reviung5_layout {
+    transform = <&default_transform>;
+};
+
+/ {
+    chosen {
+            zmk,kscan = &kscan0;
+            zmk,physical-layout = &gtips_reviung5_layout;
+    };
+
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <5>;
+        rows = <2>;
+
+        // Row 1 is virtual: encoder CCW and CW, with no additional GPIOs.
+        map = <RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(1,0) RC(1,1)>;
+    };
+
+    kscan0: kscan_0 {
+            compatible = "zmk,kscan-gpio-matrix";
+            wakeup-source;
+            diode-direction = "col2row";
+
+            col-gpios
+                = <&pro_micro 4 GPIO_ACTIVE_HIGH>
+                , <&pro_micro 5 GPIO_ACTIVE_HIGH>
+                , <&pro_micro 6 GPIO_ACTIVE_HIGH>
+                , <&pro_micro 7 GPIO_ACTIVE_HIGH>
+                , <&pro_micro 8 GPIO_ACTIVE_HIGH>
+                ;
+
+            row-gpios
+                = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                ;
+    };
+
+    encoder: encoder {
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <80>;
+        status = "okay";
+    };
+
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder>;
+        triggers-per-rotation = <20>;
+    };
+};

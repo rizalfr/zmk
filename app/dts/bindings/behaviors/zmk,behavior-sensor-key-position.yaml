@@ -1,0 +1,11 @@
+# Copyright (c) 2026 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: Forward a sensor rotation tap to a Studio-editable keymap position
+compatible: "zmk,behavior-sensor-key-position"
+include: zero_param.yaml
+properties:
+  position:
+    type: int
+    required: true
+    description: Logical keymap position receiving the press and release events
