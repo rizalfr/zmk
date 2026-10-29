@@ -10,8 +10,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/pointing.h>
 
- 
+&soft_off {
+    hold-time-ms = <2000>;
+};
+
 / {
   keymap {
     compatible = "zmk,keymap";
@@ -34,6 +38,8 @@
     };
 
     raise {
+        // Hold bottom-row MO(1): H/J/K/L move the mouse left/down/up/right.
+        // N/M press the left/right mouse buttons.
         // --------------------------------------------------------------------------------------------------------------
         // | BT 0  |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
         // | BT 1  |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
@@ -43,9 +49,9 @@
         // ---------------------------------------------------------------------------------------------------------------
       bindings = <
         &bt BT_SEL 0   &kp F1   &kp F2   &kp F3   &kp F4    &kp F5   &kp F6    &kp F7   &kp F8    &kp F9   &kp F10   &kp F11  &kp F12   &trans   &trans  &trans
-        &bt BT_SEL 1  &trans   &trans    &kp UP   &trans    &trans   &trans    &trans   &out OUT_USB      &trans   &trans    &trans   &kp UP   &trans   &trans
-        &bt BT_SEL 2  &trans   &kp LEFT  &kp DOWN &kp RIGHT &trans    &trans   &kp LEFT  &kp DOWN &kp UP   &kp RIGHT   &kp LEFT   &kp RIGHT    &rgb_ug RGB_TOG 
-                      &trans   &trans    &trans   &trans    &trans   &out OUT_BLE    &trans   &trans    &trans   &trans    &trans    &kp DOWN  &trans   &trans
+        &bt BT_SEL 1  &trans   &trans    &kp UP   &trans    &trans   &trans    &trans   &out OUT_USB      &trans   &trans    &trans   &kp UP   &trans   &soft_off
+        &bt BT_SEL 2  &trans   &kp LEFT  &kp DOWN &kp RIGHT &trans    &trans   &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_UP   &mmv MOVE_RIGHT   &kp LEFT   &kp RIGHT    &rgb_ug RGB_TOG
+                      &trans   &trans    &trans   &trans    &trans   &out OUT_BLE    &trans   &mkp LCLK    &mkp RCLK   &trans    &trans    &kp DOWN  &trans   &trans
                       &bt BT_CLR   &trans    &rgb_ug RGB_TOG    &trans   &trans    &trans   &trans
       >;
     };

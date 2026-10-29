@@ -6,6 +6,7 @@
 
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
+#include <common/nordic/nrf52840_uf2_boot_mode.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/led/led.h>
 #include <layouts/jaykeeb/alice_v2_hotswap.dtsi>
@@ -38,6 +39,26 @@
 	};
 
 
+
+    // Only the physical G switch (RC(2,6)) wakes from deep sleep.
+    keys {
+        compatible = "gpio-keys";
+        sleep_wake_g: sleep_wake_g {
+            gpios = <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        };
+    };
+
+    sleep_wakeup: sleep_wakeup {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+        trigger = <&sleep_wake_g>;
+        wakeup-source;
+        extra-gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>;
+    };
+
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&sleep_wakeup>;
+    };
 
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
@@ -89,6 +110,15 @@
 
 &adc {
     status = "okay";
+};
+
+&reg1 {
+    regulator-initial-mode = <NRF5X_REG_MODE_DCDC>;
+};
+
+// The RGB data signal uses NFC pin P0.09.
+&uicr {
+    nfct-pins-as-gpios;
 };
 
 &gpiote {
