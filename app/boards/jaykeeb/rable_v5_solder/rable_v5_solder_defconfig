@@ -9,6 +9,9 @@ CONFIG_PINCTRL=y
 # enable GPIO
 CONFIG_GPIO=y
 
+# Enable the Caps Lock indicator LED
+CONFIG_LED=y
+
 CONFIG_USE_DT_CODE_PARTITION=y
 CONFIG_BUILD_OUTPUT_UF2=y
 
